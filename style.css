@@ -1,0 +1,5 @@
+#banner {
+    height: 500px; /* Adjust the height as needed */
+    background: linear-gradient(to bottom right, #FF7F50, #FFD700);
+    /* You can adjust the gradient colors to your preference */
+  }
