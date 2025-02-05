@@ -48,7 +48,7 @@ main {
   text-align: center;
   margin: 0;
   padding: 8rem;
-  width: 100%
+  width: 100%;
   max-width: 1200px;
   background: linear-gradient(135deg, #831054, #590747, #47041B);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -58,7 +58,7 @@ summary {
   text-align: left;
   margin: 0;
   padding: 8rem;
-  width: 100%
+  width: 100%;
   max-width: 1200px;
   background-color: #F5EDE6;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -155,4 +155,5 @@ p {
   nav a {
     margin: 0.5rem 0;
   }
+  
 }
