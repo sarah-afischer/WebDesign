@@ -68,6 +68,46 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   
   }
+  .image-section {
+    display: flex;
+    justify-content: center;  /* center the images horizontally */
+    gap: 5rem;                /* space between images */
+    margin-top: 3rem;
+  }
+  
+  .image-box {
+    width: 600;             /* fixed width */
+    height: 200px;            /* fixed height */
+    overflow: hidden;          /* crop excess image */
+    border-radius: 5px;        /* optional rounding */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  
+  .image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;        /* fill box, maintain aspect ratio, crop if needed */
+    display: block;
+  }
+  
+  /* Responsive: stack images on small screens */
+  @media (max-width: 768px) {
+    .image-section {
+      flex-direction: column;
+      gap: 2rem;
+      align-items: center;
+    }
+  
+    .image-box {
+      width: 80%;
+      height: auto;            /* maintain aspect ratio */
+    }
+  
+    .image-box img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
   .button-group {
     margin-top: 2rem; /* Adds space above the buttons */
     display: flex;
@@ -87,6 +127,38 @@ body {
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  .button-section {
+    display: flex;
+    justify-content: center;   /* center group horizontally */
+    gap: 5rem;                 /* space between buttons */
+    margin-top: 3rem;
+  }
+  
+  .button {
+    display: flex;             /* allow image inside to center */
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 200px;             /* fixed height for consistency */
+    padding: 0;                /* remove text padding */
+    background-color: #831054;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+  }
+  
+  /* Images inside the buttons */
+  .button-img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 5px;
+  }
+  
+  /* Remove hover effect for this button group only */
+  .button.no-hover:hover {
+    background-color: #831054;
+    transform: none;
   }
   
   .button:hover {
@@ -188,3 +260,62 @@ body {
     transform: scale(1.05);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
   }
+
+ /* Section with image on left and text on right */
+/* Section with image on left and text on right */
+.intro-section {
+  display: flex;
+  align-items: center;   /* vertically center image and text */
+  justify-content: space-between;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.intro-image {
+  flex: 1;             /* take left half */
+  display: flex;       /* so we can control image inside */
+  justify-content: center; /* center image inside its half */
+  align-items: center;
+}
+
+.intro-image img {
+  width: 70%;          /* smaller than full half */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.intro-text {
+  flex: 1;             /* take right half */
+  text-align: left;    /* align text to left edge */
+  padding-right: 2rem; /* optional spacing from edge */
+  color: #F5EDE6;
+}
+
+.intro-text h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #F5EDE6;
+}
+
+.intro-text p {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #F5EDE6;
+}
+
+/* Responsive: stack image on top for small screens */
+@media (max-width: 768px) {
+  .intro-section {
+    flex-direction: column;
+  }
+
+  .intro-image img {
+    width: 100%;       /* allow full width on mobile */
+  }
+
+  .intro-text {
+    padding-right: 0;
+    color: #F5EDE6;
+  }
+}
