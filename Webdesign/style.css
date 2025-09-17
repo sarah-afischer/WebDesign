@@ -1,0 +1,159 @@
+/* General Styles */
+body {
+  font-family: Calibri, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  line-height: 1.6;
+}
+
+/* Header and Navbar */
+header {
+   
+  color: #F5EDE6;
+  padding: 0; /* Reduce padding for a closer-to-top header */
+  position: fixed; /* Fixes the header at the top */
+  width: 100%; /* Ensures header spans the full width */
+  top: 1rem; /* Aligns the header to the very top */
+  z-index: 10; /* Ensures header stays on top of other elements */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav a {
+  color: #F5EDE6;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-size: 1.25rem;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main Section */
+main {
+  text-align: center;
+  margin: 0;
+  padding: 8rem;
+  width: 100%;
+  max-width: 1200px;
+  background: linear-gradient(135deg, #831054, #590747, #47041B);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+summary {
+  text-align: left;
+  margin: 0;
+  padding: 8rem;
+  width: 100%;
+  max-width: 1200px;
+  background-color: #F5EDE6;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+.button-group {
+  margin-top: 2rem; /* Adds space above the buttons */
+  display: flex;
+  justify-content: center; /* Centers the buttons */
+  gap: 3rem; /* Adds spacing between buttons */
+}
+
+.button {
+  display: inline-block;
+  width: 300px;
+  padding: 1.5rem 0;
+  font-size: 1.25rem;
+  text-align: center;
+  text-decoration: none;
+  color: #f5ede6;
+  background-color: #831054;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+  background-color: #47041B; /* Darker shade on hover */
+  transform: translateY(-2px); /* Subtle lift effect on hover */
+}
+
+.button:active {
+  background-color: #47041B; /* Even darker shade when active */
+  transform: translateY(0); /* Removes lift effect when clicked */
+}
+
+.dropdown {
+  position: relative; /* Ensures the dropdown menu is positioned relative to this container */
+  display: inline-block; /* Aligns the dropdown inline with other nav links */
+}
+
+/* Dropdown menu styles */
+.dropdown-menu {
+  display: none; /* Hidden by default */
+  position: absolute; /* Positions it relative to the dropdown container */
+  top: 100%; /* Places it directly below the dropdown toggle */
+  left: 0;
+  background-color: #831054; /* Matches the theme */
+  padding: 0.5rem 0;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensures it stays above other elements */
+  min-width: 150px; /* Ensures a consistent width for the menu */
+}
+
+/* Links in the dropdown menu */
+.dropdown-menu a {
+  display: block; /* Makes each link span the full width */
+  padding: 0.5rem 1rem;
+  color: #f5ede6;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+/* Hover effect for dropdown links */
+.dropdown-menu a:hover {
+  background-color: #590747;
+}
+
+/* Show the dropdown menu when hovering over the container */
+.dropdown:hover .dropdown-menu {
+  display: block; /* Displays the dropdown menu */
+}
+
+/* Typography */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #F5EDE6;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav a {
+    margin: 0.5rem 0;
+  }
+  
+}
