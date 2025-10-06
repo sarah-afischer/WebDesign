@@ -340,3 +340,63 @@ color: #F5EDE6;
   font-weight: bold;
   color: #F5EDE6;
 }
+
+/* --- Page-specific layout for Green Vegas - Hope --- */
+
+.vegashope-layout {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+/* Left column: text + video */
+.left-column {
+  flex: 1;
+  max-width: 60%;
+}
+
+.project-text {
+  margin-bottom: 30px;
+}
+
+.project-text h2 {
+  margin-bottom: 10px;
+}
+
+.project-text ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+/* Right column: stacked images */
+.right-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  width: 35%;
+}
+
+.side-img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive layout: stack vertically on small screens */
+@media (max-width: 900px) {
+  .vegashope-layout {
+    flex-direction: column;
+  }
+
+  .left-column,
+  .right-column {
+    width: 100%;
+    max-width: 100%;
+  }
+}
