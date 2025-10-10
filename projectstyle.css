@@ -400,3 +400,16 @@ color: #F5EDE6;
     max-width: 100%;
   }
 }
+.image-row {
+  display: flex;
+  justify-content: center; /* centers them horizontally */
+  gap: 20px; /* adds space between images */
+  margin-top: 20px;
+  flex-wrap: wrap; /* allows stacking on smaller screens */
+}
+
+.side-img {
+  width: 45%; /* adjust as needed */
+  height: auto;
+  border-radius: 10px; /* optional for rounded corners */
+}
